@@ -18,6 +18,15 @@
     a:visited {
       text-decoration: none;
     }
+
+    ul.education {
+    list-style-image: url('images/mortarboard-fill.svg');
+    }
+
+    li.education span {
+      position: relative;
+      left: 10px;
+    }
   </style>
 
 </head>
@@ -86,15 +95,10 @@
             <div class="col">
               <h4 class="font-weight-bold">Education</h4>
 
-              <div class="d-flex justify-content-center">
-                <ul class="list-group list-group-horizontal align-items-center">
-                  <li class="list-group-item border-0"> <img src="images/mortarboard-fill.svg" class="rounded mx-auto d-block"> </li>
-                  <li class="list-group-item border-0"> 
-                    B.S. in Electronics Engineering, Minor in Data Science and Analytics, 2023 <br>
-                    <small>Ateneo de Manila University</small>
-                  </li>
+              <ul class="education">
+                <li class="education"> <span>B.S. in Electronics Engineering, Minor in Data Science and Analytics, 2023 <br>
+                  <small>Ateneo de Manila University</small></span</li>
                 </ul>
-              </div>
             </div>
           </div>
         </div>
