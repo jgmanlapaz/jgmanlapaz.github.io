@@ -12,6 +12,8 @@
 </head>
 
 <style>
+  @import url('https://fonts.cdnfonts.com/css/gotham');
+
   a:link { text-decoration: none; }
   a:visited { text-decoration: none; }
   a:hover { text-decoration: none; }
@@ -30,6 +32,44 @@
    .menu {
       display: inline-block;
     }
+  }
+
+  .animation{
+    display: inline-block;
+  }
+
+  .h1, h2, h3, h4, h5, h6{
+    font-family: "Gotham", sans-serif;
+  }
+
+  .p, .ul, .li{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  ul.ul-edu{
+    list-style: none;
+    line-height: 1.25em;
+  }
+
+  ul.fa-ul {
+    padding: 0;
+    margin: 0;
+    line-height: 1.25em;
+  }
+
+  div.fa-li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 0.75em;
+    top: 10px;
+
+  }
+  
+  div.education {
+    position: relative;
+    left: 30px;
+    top: -20px;
   }
 </style>
 
@@ -52,7 +92,7 @@
           <a class="nav-link " href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="files/CV - JG Manlapaz as of May 2023.pdf">CV</a>
+          <a class="nav-link " href="files/CV - JG Manlapaz as of June 2023.pdf">CV</a>
         </li>
       </ul>
     </div>
@@ -66,14 +106,12 @@
         </figure>
 
         <div class="container text-center">
-          <h2 class=" text-center font-weight-light">Juan Glicerio C. Manlapaz</h2>
-          <h3 class=" text-center font-weight-light">Electronics Engineering Graduate from </h3>
-          <a href="https://www.ateneo.edu/"><h3 class=" text-center font-weight-light">Ateneo de Manila University</h3></a>
+          <h2><b>Juan Glicerio C. Manlapaz</b></h2>
         </div>
 
         <div class="d-flex justify-content-center">
           <ul class="list-group list-group-horizontal">
-            <li class="list-group-item border-0"> <a href="https://www.linkedin.com/in/juan-glicerio-c-manlapaz-6669261a9/"> <img src="images/linkedin.svg" class="rounded mx-auto d-block" href="https://github.com/jgmanlapaz"> </a></li>
+            <li class="list-group-item border-0"> <a href="https://www.linkedin.com/in/juan-glicerio-c-manlapaz/"> <img src="images/linkedin.svg" class="rounded mx-auto d-block" href="https://github.com/jgmanlapaz"> </a></li>
             <li class="list-group-item border-0"> <a href="https://github.com/jgmanlapaz"> <img src="images/github.svg" class="rounded mx-auto d-block" href="https://github.com/jgmanlapaz"> </a> </li>
             <li class="list-group-item border-0"> <a href="mailto:juanglicerio.manlapaz@gmail.com"> <img src="images/envelope.svg" class="rounded mx-auto d-block" href="https://github.com/jgmanlapaz"> </a> </li>
             <li class="list-group-item border-0"> <a href="https://twitter.com/imdaonlyjuan"> <img src="images/twitter.svg" class="rounded mx-auto d-block" href="https://github.com/jgmanlapaz"> </a> </li>
@@ -83,13 +121,13 @@
       </div>
       <div class="col-md-7">
         <div class="container p-4 text-left">
-          <p>Juan Glicerio "JG" Manlapaz is an aspiring graduate student who obtained his bachelors degree in electronics engineering from the Ateneo de Manila University, Quezon City, Philippines. His undergraduate thesis revolves around the simulation and modelling of microgrids in university buildings under the supervision of the Ateneo Energy Research Laboratory. JG is interested in pursuing a career in research and development of power electronics and entrepreneurship of online engineering education later in his career. In his spare time, JG enjoys playing music, reading, jogging, cooking, playing <i>Minecraft Hardcore</i>, and tutoring fellow students.</p>
+          <p>JG received his BS in electronics engineering in 2022 from the Ateneo de Manila University and is a registered electronics engineer and electronics technician in the Philippines. Currently, he is a power electronics research assistant for <a href="https://www.lee-upd.com/CIPHER">Project CIPHER</a> which is  under the joint supervision of the Laboratory of Electrochemical Engineering and Artesyn-Power Electronics Laboratory of the University of the Philippines Diliman.</p>
         </div>
 
         <div class="container">
           <div class="row">
-            <div class="col">
-                <h4 class="font-weight-bold">Interests</h4>
+            <div class="col-md-5">
+                <h3><b>Interests</b></h3>
                 <ul>
                   <li>Microgrid Simulation and Modelling</li>
                   <li>Energy Monitoring</li>
@@ -98,16 +136,29 @@
                   <li>Engineering Education</li>
                 </ul>
             </div>
-            <div class="col">
-              <h4 class="font-weight-bold">Education</h4>
-
-              <div class="d-flex justify-content-center">
-                <ul class="list-group list-group-horizontal align-items-center">
-                  <li class="list-group-item border-0"> <img src="images/mortarboard-fill.svg" class="rounded mx-auto d-block"> </li>
-                  <li class="list-group-item border-0"> 
-                    Ateneo de Manila University <br>
-                    <small><i>B.S. Electronics Engineering</i></small><br>
-                    <small><i>Minor in Data Science and Analytics</small>
+            <div class="col-md-7">
+              <h3><b>Education</b></h3>
+                <ul class="ul-edu fa-ul" style="margin: 10px;">
+                  <!-- <li style="margin-bottom: -0.9em;"> 
+                    <div class="fa-li">
+                      <img src="images/mortarboard-fill.svg" class="rounded mx-auto d-block"> 
+                    </div>
+                    <div class="education">
+                      <p style=" margin: 0">M.S. in Electrical Engineering, ongoing</p>
+                      
+                      <p style="font-size:0.75rem; margin: 0
+                    ">University of the Philippines Diliman</p>
+                    </div>
+                  </li> -->
+                  <li style="margin-bottom: -0.9em;"> 
+                      <div class="fa-li">
+                        <img src="images/mortarboard-fill.svg" class="rounded mx-auto d-block"> 
+                      </div>
+                      <div class="education">
+                        <p style=" margin: 0">B.S. in Electronics Engineering with Minor in Data Science and Analytics, 2022</p>
+                        
+                        <p style="font-size:0.75rem; margin: 0">Ateneo de Manila University</p>
+                      </div>
                   </li>
                 </ul>
               </div>
@@ -116,7 +167,5 @@
         </div>
       </div>
     </div>
-  </div>
   </body>
-
 </html>
