@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QPI to GWA Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="images/logo.png" type="image/gif" sizes="16x16">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+  @import url('https://fonts.cdnfonts.com/css/gotham');
+
+  a:link { text-decoration: none; }
+  a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:active { text-decoration: none; }
+  
+  .h1, h2, h3, h4, h5, h6{
+    font-family: "Gotham", sans-serif;
+  }
+
+  .p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 50%;
+  }
+</style>
+
+<body>
+  <div class="center">
+    <div class="container mb-4">
+      <h1><b>QPI to GWA Converter</b></h1>
+      <p>Find out the General Weighted Average (GWA) equivalent of your Quality Point Index (QPI)! Click <a href="gwatoqpiconverter.html">here</a> to convert from GWA to QPI.</p>
+    </div>
+
+    <div class="row mt-4">
+      <div class="column">
+        <div class="container">
+          <p>
+            <label><b>Input your QPI:</b></label>
+            <input id="inputqpi" type="number" placeholder="QPI" oninput="GradeConverter(this.value)" onchange="GradeConverter(this.value)">
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="container">
+          <p><b>Equivalent GWA: </b>
+            <br><span id="outputgwa"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p><br><br>Sources:
+        <br> <a href="https://www.ateneo.edu/sites/default/files/2022-08/Volume%201%20LS%20Undergraduate%20Student%20Handbook%202022.pdf">Section V, Loyola Schools Undergraduate Student Handbook, Volume 1, 2022 Edition</a>
+        <br> <a href="https://our.upd.edu.ph/files/acadinfo/GRADUATION%20WITH%20HONORS.pdf">Revised UP Code</a>
+      </p>
+    </div>
+
+    <div class="container">
+      <p>Developed by <a href="https://jgmanlapaz.github.io/index.html">JG Manlapaz</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+  function GradeConverter(valNum) {
+    var gwa;
+    if (valNum > 4){
+      gwa = "Not Allowed!";
+    }
+    else if (valNum < 1 && valNum >= 0){
+      gwa = 5;
+      gwa = gwa.toFixed(2)
+    }
+
+    else if (valNum <=4 && valNum >= 3.49) {
+      gwa = -valNum*1.4906 + 6.9641
+      gwa = gwa.toFixed(2)
+    }
+
+    else if (valNum <=3.49 && valNum >= 1) {
+      gwa = -valNum*0.4985 + 3.4976
+      gwa = gwa.toFixed(2)
+    }
+
+    document.getElementById("outputgwa").innerHTML=gwa;
+  }
+  </script>
+</body>
+</html>
